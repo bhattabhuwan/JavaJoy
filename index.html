@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaJoy Coffee Shop</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <span class="logo-text">Java</span><span class="logo-text-alt">Joy</span>
+      </div>
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#menu"><i class="fas fa-coffee"></i> Menu</a></li>
+        <li><a href="#about"><i class="fas fa-info-circle"></i> About Us</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero-section">
+    <div class="hero-content">
+      <h1>Welcome to Our Coffee Shop</h1>
+      <p>Experience the best coffee in town</p>
+      <a href="#menu" class="cta-button">Explore Menu</a>
+    </div>
+  </section>
+
+  <section id="menu" class="section">
+    <h2>Our Menu</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="img-container">
+          <img src="img/Cappuccino.jpg" alt="Cappuccino">
+        </div>
+        <h3>Classic Cappuccino</h3>
+        <p>Rich and bold single shot espresso topped with silky foam</p>
+        <span class="price">$4.99</span>
+        <button class="order-btn"><i class="fas fa-shopping-cart"></i> Order Now</button>
+      </div>
+      <div class="menu-item">
+        <div class="img-container">
+          <img src="img/Espresso.jpg" alt="Espresso">
+        </div>
+        <h3>Perfect Espresso</h3>
+        <p>Smooth espresso with rich crema and intense flavor</p>
+        <span class="price">$5.99</span>
+        <button class="order-btn"><i class="fas fa-shopping-cart"></i> Order Now</button>
+      </div>
+      <div class="menu-item">
+        <div class="img-container">
+          <img src="img/Latte.jpg" alt="Latte">
+        </div>
+        <h3>Creamy Latte</h3>
+        <p>Espresso with steamed milk and a light layer of foam</p>
+        <span class="price">$6.99</span>
+        <button class="order-btn"><i class="fas fa-shopping-cart"></i> Order Now</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>We are passionate about serving the best coffee experience to our customers. Our journey started in 2020 with a simple mission: to provide high-quality coffee in a welcoming atmosphere.</p>
+        <p>Experience the cozy ambiance of our coffee shop, where every cup tells a story and every visit feels like home.</p>
+      </div>
+      <div class="about-images">
+        <div class="about-img-container">
+          <img src="img/aboutus1.jpg" alt="Our Coffee Shop Interior" class="about-img">
+        </div>
+        <div class="about-img-container">
+          <img src="img/aboutus2.jpg" alt="Our Coffee Bar" class="about-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <div class="contact-container">
+      <div class="contact-info">
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <p>123 Coffee Street, City, Country</p>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-phone"></i>
+          <p>+1 234 567 890</p>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <p>info@coffeeshop.com</p>
+        </div>
+      </div>
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      <p>&copy; 2024 Coffee Shop. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
