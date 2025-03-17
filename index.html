@@ -13,15 +13,21 @@
       <div class="logo">
         <span class="logo-text">Java</span><span class="logo-text-alt">Joy</span>
       </div>
-      <div class="menu-toggle">
-        <i class="fas fa-bars"></i>
-      </div>
       <ul class="nav-links">
         <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
         <li><a href="#menu"><i class="fas fa-coffee"></i> Menu</a></li>
-        <li><a href="#about"><i class="fas fa-info-circle"></i> About Us</a></li>
+        <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
         <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        <li>
+          <a href="#" id="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count">0</span>
+          </a>
+        </li>
       </ul>
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
     </nav>
   </header>
 
@@ -33,35 +39,44 @@
     </div>
   </section>
 
-  <section id="menu" class="section">
+  <section id="menu" class="menu">
     <h2>Our Menu</h2>
     <div class="menu-grid">
       <div class="menu-item">
         <div class="img-container">
           <img src="img/Cappuccino.jpg" alt="Cappuccino">
         </div>
-        <h3>Classic Cappuccino</h3>
-        <p>Rich and bold single shot espresso topped with silky foam</p>
-        <span class="price">$4.99</span>
-        <button class="order-btn"><i class="fas fa-shopping-cart"></i> Order Now</button>
+        <h3>Cappuccino</h3>
+        <p>Rich espresso topped with creamy milk foam</p>
+        <p class="price">$4.99</p>
+        <button class="order-btn">
+          <i class="fas fa-shopping-cart"></i>
+          <span>Add to Cart</span>
+        </button>
       </div>
       <div class="menu-item">
         <div class="img-container">
           <img src="img/Espresso.jpg" alt="Espresso">
         </div>
-        <h3>Perfect Espresso</h3>
-        <p>Smooth espresso with rich crema and intense flavor</p>
-        <span class="price">$5.99</span>
-        <button class="order-btn"><i class="fas fa-shopping-cart"></i> Order Now</button>
+        <h3>Espresso</h3>
+        <p>Pure and intense coffee shot</p>
+        <p class="price">$3.99</p>
+        <button class="order-btn">
+          <i class="fas fa-shopping-cart"></i>
+          <span>Add to Cart</span>
+        </button>
       </div>
       <div class="menu-item">
         <div class="img-container">
           <img src="img/Latte.jpg" alt="Latte">
         </div>
-        <h3>Creamy Latte</h3>
-        <p>Espresso with steamed milk and a light layer of foam</p>
-        <span class="price">$6.99</span>
-        <button class="order-btn"><i class="fas fa-shopping-cart"></i> Order Now</button>
+        <h3>Latte</h3>
+        <p>Smooth espresso with steamed milk</p>
+        <p class="price">$4.49</p>
+        <button class="order-btn">
+          <i class="fas fa-shopping-cart"></i>
+          <span>Add to Cart</span>
+        </button>
       </div>
     </div>
   </section>
@@ -131,5 +146,88 @@
   </footer>
 
   <script src="main.js"></script>
+
+  <!-- Cart Modal -->
+  <div id="cart-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Your Cart</h2>
+      
+      <!-- Cart View -->
+      <div id="cart-view">
+        <div id="cart-items">
+          <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart-total">
+          <h3>Total: $<span id="cart-total">0.00</span></h3>
+        </div>
+        <button id="checkout-btn" class="btn">
+          <i class="fas fa-shopping-cart"></i>
+          Proceed to Checkout
+        </button>
+      </div>
+
+      <!-- Payment View -->
+      <div id="payment-view" style="display: none;">
+        <button id="back-to-cart" class="back-btn">
+          <i class="fas fa-arrow-left"></i>
+          Back to Cart
+        </button>
+        
+        <h3>Select Payment Method</h3>
+        <div class="payment-methods">
+          <div class="payment-method">
+            <input type="radio" name="payment" id="esewa" value="esewa">
+            <label for="esewa" class="method-content">
+              <i class="fas fa-mobile-alt"></i>
+              <span>eSewa</span>
+            </label>
+          </div>
+          
+          <div class="payment-method">
+            <input type="radio" name="payment" id="bank" value="bank">
+            <label for="bank" class="method-content">
+              <i class="fas fa-university"></i>
+              <span>Bank Transfer</span>
+            </label>
+          </div>
+          
+          <div class="payment-method">
+            <input type="radio" name="payment" id="cash" value="cash">
+            <label for="cash" class="method-content">
+              <i class="fas fa-money-bill-wave"></i>
+              <span>Cash on Delivery</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Payment Details -->
+        <div id="esewa-details" class="payment-details" style="display: none;">
+          <h4>eSewa Payment</h4>
+          <div class="qr-placeholder">
+            <i class="fas fa-qrcode"></i>
+            <p>Scan QR Code</p>
+          </div>
+          <p>eSewa ID: 9841234567</p>
+        </div>
+
+        <div id="bank-details" class="payment-details" style="display: none;">
+          <h4>Bank Transfer Details</h4>
+          <p>Bank: Nepal Bank Limited</p>
+          <p>Account Name: JavaJoy Coffee</p>
+          <p>Account Number: 0123456789</p>
+          <p>Branch: Kathmandu</p>
+        </div>
+
+        <button id="confirm-payment" class="btn">
+          <i class="fas fa-check"></i>
+          Confirm Payment
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Container -->
+  <div id="notification-container"></div>
 </body>
 </html>
